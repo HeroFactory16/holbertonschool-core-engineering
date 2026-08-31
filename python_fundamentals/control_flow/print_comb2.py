@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
-for i in range(0, 100):
+print(f"{0:02}", end="")
+for i in range(1, 100):
     print(f", {i:02}".format(), end="")
-print("")
