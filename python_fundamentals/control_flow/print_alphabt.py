@@ -1,3 +1,3 @@
 #!/usr/bin/env python3
-for letter in ("abcdfghijklmnoprstuvwxyz\n"):
+for letter in (f"abcdfghijklmnoprstuvwxyz\n"):
     print(letter, end="")
