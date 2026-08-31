@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 number = __import__('random').randint(-10000, 10000)
-last = number % 10
-output = f"Last digit of {number} is {last}"
+
+if number < 0:
+    last = (number % 10) - 10
+else:
+    last = number % 10
+
+output = f"Last digit of {number} is {last} "
 
 if last == 0:
     output += "and is 0"
