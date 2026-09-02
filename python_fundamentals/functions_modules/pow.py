@@ -2,11 +2,10 @@
 def pow(a, b):
     result = 1
     if b < 0:
-        b = -b
-        for _ in range (0, b):
-            result /= a
+        for _ in range (-b):
+            result *= 1 / a
         return result
 
-    for _ in range (0, b):
+    for _ in range (b):
         result *= a
     return result
