@@ -1,0 +1,1 @@
+This folder is about learning functions and modules (imports) in Python
