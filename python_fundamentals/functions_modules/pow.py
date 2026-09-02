@@ -5,10 +5,8 @@ def pow(a, b):
         b = -b
         for _ in range (0, b):
             result /= a
-        print(result)
         return result
 
     for _ in range (0, b):
         result *= a
-    print(result)
     return result
