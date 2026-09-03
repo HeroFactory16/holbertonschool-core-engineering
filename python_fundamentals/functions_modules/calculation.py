@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-from calculation_1 import add
-from calculation_1 import sub
-from calculation_1 import mult
-from calculation_1 import divide
+from calculation_1 import add, sub, mul, div
 
 if __name__ == "__main__":
     a = 10
@@ -10,5 +7,5 @@ if __name__ == "__main__":
 
     print(a, "+".format(), b, "=", add(a, b))
     print(a, "-".format(), b, "=", sub(a, b))
-    print(a, "*".format(), b, "=", mult(a, b))
-    print(a, "/".format(), b, "=", divide(a, b))
+    print(a, "*".format(), b, "=", mul(a, b))
+    print(a, "/".format(), b, "=", div(a, b))
