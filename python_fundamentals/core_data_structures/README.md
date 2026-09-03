@@ -1,0 +1,1 @@
+This folder is about learning structures and datas in Python
