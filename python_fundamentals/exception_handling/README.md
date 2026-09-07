@@ -1,0 +1,1 @@
+This folder is about lreaning error and exception handling in Python
