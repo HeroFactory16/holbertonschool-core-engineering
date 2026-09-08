@@ -1,0 +1,1 @@
+This folder is about learning OOP concepts in Python
