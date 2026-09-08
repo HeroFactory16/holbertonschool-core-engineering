@@ -4,6 +4,6 @@
 
 class Square:
     """Define Square constructor."""
-
+    
     def __init__(self):
         pass
