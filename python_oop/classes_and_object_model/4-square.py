@@ -16,6 +16,10 @@ class Square:
         return self.size
 
     def set_size(self, value):
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
         self.size = value
 
     def area(self):
