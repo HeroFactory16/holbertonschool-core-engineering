@@ -6,7 +6,6 @@ class Square:
     """Define Square constructor."""
 
     def __init__(self, size=0):
-        self.check_size_value(size)
         self.__size = size
 
     @property
