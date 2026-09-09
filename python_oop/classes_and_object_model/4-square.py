@@ -10,13 +10,13 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        self.size = size
 
     def get_size(self):
-        return self.__size
+        return self.size
 
     def set_size(self, value):
-        self.__size = value
+        self.size = value
 
     def area(self):
-        return self.__size ** 2
+        return self.size ** 2
