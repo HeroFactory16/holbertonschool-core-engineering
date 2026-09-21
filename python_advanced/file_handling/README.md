@@ -1,0 +1,1 @@
+This folder is about learning to work with files, ie. read them, write them.
