@@ -10,4 +10,4 @@ def read_file(filename=""):
     File's encoded as UTF-8
     """
     with open(filename, "r", encoding="utf-8") as file:
-        print(file.read())
+        print(file.read(), end="")
