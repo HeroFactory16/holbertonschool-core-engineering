@@ -8,7 +8,7 @@ Simple text file writer.
 
 def write_file(filename="", text=""):
     """
-    Reads a text file and print its content in stdout.
+    Writes text into a file and returns the number of printed characters.
     File's encoded as UTF-8
     """
     try:
