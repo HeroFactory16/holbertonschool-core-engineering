@@ -12,7 +12,7 @@ async def handler(websocket):
     try:
         async for message in websocket:
             print(f"Received: {message}")
-            await websocket.send(f"{message}")
+            await websocket.send(f"OK:{message}")
     except websockets.ConnectionClosed:
         pass
     finally:
