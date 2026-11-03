@@ -12,7 +12,7 @@ async def handler(websocket):
     try:
         async for message in websocket:
             print(f"Received: {message}")
-            if message.strip():
+            if not message.strip():
                 await websocket.send(f"ERR:EMPTY")
             else:
                 await websocket.send(f"OK:{message}")
