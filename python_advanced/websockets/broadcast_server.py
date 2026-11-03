@@ -16,8 +16,7 @@ async def handler(websocket):
         async for message in websocket:
             if not message.strip():
                 await websocket.send(f"ERR:EMPTY")
-            print(f"Received: {message}")
-            websockets.broadcast(CLIENTS, f"{message}")
+            websockets.broadcast(CLIENTS, f"B:{message}")
     except websockets.ConnectionClosed:
         pass
     finally:
