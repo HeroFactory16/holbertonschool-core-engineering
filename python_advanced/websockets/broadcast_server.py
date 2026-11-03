@@ -5,20 +5,23 @@ import websockets
 HOST = "127.0.0.1"
 PORT = 8765
 
+CLIENTS = set()
+
 
 async def handler(websocket):
     """Handle a single client connection."""
     print(f"Client connected: {websocket.remote_address}")
+    CLIENTS.add(websocket)
     try:
         async for message in websocket:
-            print(f"Received: {message}")
             if not message.strip():
                 await websocket.send(f"ERR:EMPTY")
-            else:
-                await websocket.broadcast(f"B:{message}")
+            print(f"Received: {message}")
+            websockets.broadcast(CLIENTS, f"{message}")
     except websockets.ConnectionClosed:
         pass
     finally:
+        CLIENTS.discard(websocket)
         print(f"Client disconnected: {websocket.remote_address}")
 
 
