@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 import uvicorn
 from starlette.applications import Starlette
-from starlette.responses import PlainTextResponse, HTMLResponse
-from starlette.routing import Route, WebSocketRoute
+from starlette.responses import FileResponse
+from starlette.routing import Mount, Route, WebSocketRoute
 from starlette.websockets import WebSocket, WebSocketDisconnect
+from starlette.staticfiles import StaticFiles
 
 HOST = "127.0.0.1"
 PORT = 8000
@@ -13,7 +14,7 @@ CLIENTS = set()
 
 async def homepage(request):
     """Serve the homepage."""
-    return HTMLResponse("<h1>WebSocket Echo</h1>")
+    return FileResponse("static/index.html")
 
 
 async def ws_endpoint(websocket: WebSocket):
@@ -47,6 +48,7 @@ async def broadcast(message):
 routes = [
     Route("/", homepage),
     WebSocketRoute("/ws", ws_endpoint),
+    Mount("/static", StaticFiles(directory="static"), name="static"),
 ]
 
 app = Starlette(routes=routes)
