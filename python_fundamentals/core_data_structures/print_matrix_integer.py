@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
 def print_matrix_integer(matrix=[[]]):
+    "{:d}".format()
     for i in matrix:
-        print(*i, "{:d}".format(), sep=" ")
+        print(*i, sep=" ")
