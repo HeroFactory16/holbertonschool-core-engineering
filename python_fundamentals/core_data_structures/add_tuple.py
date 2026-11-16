@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
-def check_tuple(t=()):
-    if not t[0]:
-        t[0] = 0
-    if not t[1]:
-        t[1] = 0
-    return t
+def isnum(value):
+    """Return value if it's a number, else 0."""
+    return value if isinstance(value, (int, float)) else 0
 
 
 def add_tuple(tuple_a=(), tuple_b=()):
-    result = (0, 0)
-    result[0] = check_tuple(tuple_a[0]) + check_tuple(tuple_b[0])
-    result[1] = check_tuple(tuple_a[1]) + check_tuple(tuple_b[1])
-
-    return result
+    a = (tuple_a + (0, 0))[:2]
+    b = (tuple_b + (0, 0))[:2]
+    return (isnum(a[0]) + isnum(b[0]), isnum(a[1]) + isnum(b[1]))
