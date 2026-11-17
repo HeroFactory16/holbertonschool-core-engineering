@@ -2,7 +2,7 @@
 """Let's make a rectangle, shall we?"""
 
 
-class BaseGeometry():
+class BaseGeometry:
     """Class definition"""
     def area(self):
         raise Exception("area() is not implemented")
