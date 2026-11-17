@@ -1,0 +1,1 @@
+This folder is about learning inheritance concept in Python.
