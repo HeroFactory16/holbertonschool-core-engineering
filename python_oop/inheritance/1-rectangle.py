@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
-from base_geometry import BaseGeometry
 """Let's make a rectangle, shall we?"""
+
+
+class BaseGeometry():
+    """Class definition"""
+    def area(self):
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
 
 
 class Rectangle(BaseGeometry):
