@@ -12,8 +12,6 @@ class Shape(ABC):
     def integer_validator(self, name, value):
         if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
 
     @abstractmethod
     def area(self):
@@ -29,6 +27,7 @@ class Shape(ABC):
 class Circle(Shape):
     """Reject pointy guy, go back round"""
     def __init__(self, radius):
+        self.integer_validator("radius", radius)
         self.__radius = radius
 
     def area(self):
