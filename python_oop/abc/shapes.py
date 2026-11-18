@@ -15,9 +15,6 @@ class Shape(ABC):
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
-    def shape_info(self):
-        print(f"Area: {self.area}\nPerimeter: {self.perimeter}")
-
     @abstractmethod
     def area(self):
         """Each shape must compute its own area"""
@@ -54,3 +51,7 @@ class Rectangle(Shape):
 
     def perimeter(self):
         return 2 * (self.__width + self.__height)
+
+
+def shape_info(shape:Shape):
+    print(f"Area: {shape.area}\nPerimeter: {shape.perimeter}")
